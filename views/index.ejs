@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style800.css" media="(max-width:800px)">
+    <title>Landing Page</title>
+</head>
+<body>
+    
+    <input type="checkbox" id="close-menu" class="close-menu" aria-label="Close menu" role="button">
+    <label for="close-menu" class="close-menu-label" title="close menu"></label>
+    <aside class="menu white-bg">
+        <div class="main-content menu-content">
+            <h1 onclick="getElementById('close-menu').checked = false;">
+                <a href="#home">LOGO</a>
+            </h1>
+
+            <nav>
+                <ul onclick="getElementById('close-menu').checked = false;">
+                    <li><a href="#intro">INTRO</a></li>
+                    <li><a href="#grid-one">MY GRID</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="/admin" target="_blank">ADMIN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <div class="menu-spacing"></div>
+
+    <section id="home" class="intro main-bg section">
+        <div class="main-content intro-content">
+            <div class="intro-text-content">
+                <h2>HTML 5 | CSS3 | JS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt iusto vitae incidunt provident. Architecto atque, enim possimus neque laborum velit natus ex! Doloremque illum mollitia laudantium rem deleniti, explicabo ipsam.</p>
+            </div>
+            <div class="intro-img">
+                <img src="assets/images/javascript-not-optimized.svg" alt="Logo de HTML, CSS e JS">
+            </div>
+        </div>
+    </section>
+
+    <section id="intro" class="white-bg section">
+        <div class="main-content top3-content">
+            <h2>lorem inpsum dolor.</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, in. Voluptatum optio ab cumque iusto consequuntur, doloribus numquam commodi consequatur facilis dolor mollitia libero molestias illo dignissimos. Ipsam, fugiat fugit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vero quaerat nesciunt, enim recusandae nisi qui sunt magnam at maiores molestiae expedita quis explicabo neque natus aperiam perferendis alias cumque!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque deleniti blanditiis dolorum facilis. Itaque est officia, enim mollitia iste molestias incidunt dolorum qui error magni culpa modi, quae nostrum a!</p>
+        </div>
+    </section>
+
+    <section id="grid-one" class="grid-one main-bg section">
+        <div class="main-content grid-one-content">
+            <h2 class="grid-main-heading">My Grid</h2>
+            <div class="grid">
+                <% for( var n=0; n<dados.length;n++) { %>
+                <article>
+                    <h3><%=dados[n].titulo %></h3>
+                    <p><%=dados[n].texto %></p>
+                </article>
+                <% } %>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="grid-one white-bg section">
+        <div class="main-content grid-one-content">
+            <h2 class="grid-main-heading">Gallery</h2>
+            <div class="grid">
+            <% for (var i=0;i<gallery.length;i++){ %>
+                <div class="gallery-img">
+                    <img src="./assets/images/<%=gallery[i].arquivo%>" width="100%" />
+                </div>
+                <%}%>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="intro main-bg section">
+        <div class="main-content intro-content">
+            <div class="contact-form">
+                <h2 class="grid-main-heading">Contact</h2>
+                <form action="" method="POST">
+
+                    <fieldset class="form-grid">
+
+                        <div class="form-group">
+                            <label for="first-name">First name</label>
+                            <input type="text" name="first_name" id="last-name" placeholder="Your name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="last-name">Last name</label>
+                            <input type="text" name="last_name" id="last-name" placeholder="Your last name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" name="email" id="email" placeholder="Your e-mail">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message"></textarea>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <button type="subimit">Send message</button>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer white-bg">
+        <p><a href="#" rel="nofollow" target="_blank">Feito<span class="heart"></span> Pelo LD - AC - 1 Trimestre - INW | BD2 | LP2</a></p>
+    <p><a href="/admin" target="_blank">admin</a></p>
+    </footer>
+
+    <a href="#" class="back-to-top">▶</a>
+</body>
+</html>

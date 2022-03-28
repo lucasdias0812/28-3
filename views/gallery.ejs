@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - admin</title>
+</head>
+<body>
+    <h1> <a href="/admin"><-</a> Imagens - Gallery</h1> 
+    <h3>Adicionar Imagens</h3>
+
+    <form action="" method="post" enctype="multipart/form-data">
+
+        <label for="imagem">Imagem:</label><br>
+
+        <input type="file" name="imagem" id="imagem"><br>
+
+        <input type="submit" value="Gravar">
+
+    </form>
+
+    <h3>Listar imagens gravadas</h3>
+
+    <table>
+
+        <tr>
+
+            <th>Nome do Arquivo</th>
+
+            <th>Preview</th>
+
+        </tr>
+
+        <% for (var n=0;n<resultado.length;n++){%>
+
+            <tr>
+
+        <td><%=resultado[n].arquivo%></td>
+
+        <td><img src="./assets/images/<%=resultado[n].arquivo%>"
+
+        width="200"></td>
+
+    </tr>
+
+    <%}%>
+
+    </table>
+
+</body>
+
+</html>

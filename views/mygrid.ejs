@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My grid - Manutenção de Notícias</title>
+</head>
+<body>
+    <container>
+        <main>
+    <h1><a href="/admin"> <- </a>Notícias - My grid</h1>
+    <h3>Adicionar Notícias</h3>
+    <form action="" method="post">
+        <label for="titulo">Título</label>
+        <input type="text" name="titulo" id="titulo" required><br>
+        <label for="texto">Texto:</label>
+        <textarea name="texto" id="texto" cols="30" rows="10" required></textarea><br>
+        <input type="submit" value="Gravar">    
+    </form>
+    <h3>Listar Notícias</h3>
+    <table>
+        <tr>
+            <th>Título</th>
+            <th>Texto</th>
+        </tr>
+        <% for(var n = 0; n<dados.length;n++){ %>
+        <tr>
+            <td><%=dados[n].titulo%></td>
+            <td><%=dados[n].texto%></td>
+            <td><input type="submit" value="Excluir"></td>
+        </tr>
+        <% } %>
+
+    </table>
+</main>
+</container>
+</body>
+</html>
